@@ -8,7 +8,13 @@
   "main": "dist/main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "cross-env NODE_ENV=development ts-node watch.ts"
+    "dev": "cross-env NODE_ENV=development ts-node watch.ts",
+    "dev:frontend": "vite src/frontend",
+    "build": "npm run build:frontend && npm run build:preload && npm run build:backend",
+    "build:frontend": "vue-tsc -p src/frontend/tsconfig.json && vite build src/frontend",
+    "build:preload": "tsc -p src/preload/tsconfig.json && vite build src/preload",
+    "build:backend": "tsc -p src/backend/tsconfig.json && vite build src/backend",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@types/node": "^20.7.2",
