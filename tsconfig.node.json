@@ -6,8 +6,8 @@
     "allowSyntheticDefaultImports": true
   },
   "include": [
-    "frontend/vite.config.ts",
-    "backend/vite.config.ts",
-    "preload/vite.config.ts"
+    "src/frontend/vite.config.ts",
+    "src/backend/vite.config.ts",
+    "src/preload/vite.config.ts"
   ]
 }
