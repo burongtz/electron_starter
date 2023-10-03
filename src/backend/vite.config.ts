@@ -1,12 +1,14 @@
 import { builtinModules } from 'node:module'
 import { defineConfig } from 'vite'
 
+const rootDir: string = process.cwd();
+
 export default defineConfig({
-  envDir: process.cwd(),
+  envDir: rootDir,
   root: __dirname,
   base: './',
   build: {
-    outDir: '../dist',
+    outDir: `${rootDir}/dist`,
     sourcemap: false,
     emptyOutDir: false,
     // target: 'node14',
