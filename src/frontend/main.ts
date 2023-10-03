@@ -1,1 +1,1 @@
-document.body.innerHTML = '<h1>Hello from front.ts</h1>';
+document.body.innerHTML = '<h1>Hello World!</h1>';
